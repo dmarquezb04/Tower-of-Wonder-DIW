@@ -1,0 +1,123 @@
+.contenido-pagina {
+  flex: 1;
+  background: linear-gradient(180deg, #fff7ec 0%, #ffe8d0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.titulo-tienda {
+  font-size: 32px;
+  color: #5b4632;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.rejilla-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.tarjeta-producto {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(156, 122, 61, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  text-align: center;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(156, 122, 61, 0.15);
+}
+
+.contenedor-imagen-producto {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  background: rgba(240, 230, 215, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imagen-producto {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.tarjeta-producto:hover .imagen-producto {
+  transform: scale(1.08);
+}
+
+.nombre-producto {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 18px;
+  color: #3b2a4a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.descripcion-producto {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.precio-producto {
+  font-size: 20px;
+  font-weight: 700;
+  color: #8a5f1a;
+  margin-bottom: 16px;
+}
+
+.boton-comprar {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+
+/* Móvil y tablets */
+@media (max-width: 1024px) {
+  .rejilla-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .rejilla-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .titulo-tienda {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  .contenedor-imagen-producto {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rejilla-productos {
+    grid-template-columns: 1fr;
+  }
+  .contenedor-imagen-producto {
+    height: 220px;
+  }
+}

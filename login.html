@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower of Wonder - Iniciar Sesión</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- header -->
+  <header class="header">
+    <a href="index.html" class="enlace-logo">
+      <img src="assets/img/logo.png" alt="Tower of Wonder Logo" class="logo-imagen">
+    </a>
+
+    <div class="contenedor-menu">
+      <ul class="menu-principal">
+        <li class="item-navegacion">
+          <a href="index.html" class="boton enlace-navegacion">Inicio</a>
+        </li>
+        <li class="item-navegacion">
+          <a href="tienda.html" class="boton enlace-navegacion">Tienda</a>
+        </li>
+        <li class="item-navegacion">
+          <a href="personajes.html" class="boton enlace-navegacion">Personajes</a>
+        </li>
+        <li class="item-navegacion">
+          <a href="noticias.html" class="boton enlace-navegacion">Noticias</a>
+        </li>
+        <li class="item-navegacion">
+          <a href="contacto.html" class="boton enlace-navegacion">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="principal contenido-pagina">
+    <div class="contenedor-login">
+      <div class="contenido-login">
+        <h2 class="titulo-login">Iniciar sesión</h2>
+        
+        <form action="index.html" method="get">
+          <div class="fila-formulario">
+            <label for="login-username">Usuario o Email</label>
+            <div class="campo-formulario">
+              <input class="entrada-texto" 
+                type="text" 
+                id="login-username" 
+                name="username" 
+                required 
+              />
+            </div>
+          </div>
+          
+          <div class="fila-formulario">
+            <label for="login-password">Contraseña</label>
+            <div class="campo-formulario">
+              <input class="entrada-texto" 
+                type="password" 
+                id="login-password" 
+                name="password" 
+                required 
+              />
+            </div>
+          </div>
+          
+          <div class="fila-centrada">
+            <button type="submit" class="boton boton-dorado boton-enviar">
+              Entrar
+            </button>
+          </div>
+        </form>
+
+        <div class="pie-formulario">
+          <p>
+            ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="enlaces-redes">
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/redes_sociales/twitter.png" alt="Twitter" class="icono-redes">
+      </a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/redes_sociales/instagram.png" alt="Instagram" class="icono-redes">
+      </a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/redes_sociales/youtube.png" alt="YouTube" class="icono-redes">
+      </a>
+    </div>
+
+    <div class="licencia">
+      <p class="texto-licencia">
+        © 2026 Tower of Wonder. Todos los derechos reservados.<br>
+        <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a>
+      </p>
+    </div>
+
+    <div class="newsletter">
+      <form class="formulario-newsletter" action="#" method="get">
+        <input type="email" placeholder="Tu correo para la newsletter..." class="correo-newsletter entrada-texto" required>
+        <button type="submit" class="boton boton-dorado boton-newsletter">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+
+</body>
+</html>

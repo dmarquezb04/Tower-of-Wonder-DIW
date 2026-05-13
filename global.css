@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+
+
+/* =====================
+   RESET MÍNIMO
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #2b2b2b;
+  background: linear-gradient(180deg, #fff7ec 0%, #ffe8d0 100%);
+}
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  body {
+    min-height: 100dvh;
+  }
+}
+
+/* =====================
+   ESTILOS COMPARTIDOS
+   ===================== */
+
+h1, h2, h3, .boton, .enlace-navegacion {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.principal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base para todos los botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+  white-space: nowrap;
+}
+
+.boton:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.boton:active {
+  transform: translateY(1px);
+}
+
+.boton-dorado {
+  background: linear-gradient(180deg, #b88628 0%, #8a5f1a 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(122, 84, 30, 0.25);
+}
+
+.boton-oscuro {
+  background: linear-gradient(90deg, #3b2a4a 0%, #5b3f6a 100%);
+  color: #f3e8d6;
+}
+
+/* Formularios compartidos */
+.fila-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.fila-formulario label {
+  color: #5b4632;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.entrada-texto {
+  width: 100%;
+  background-color: #fff6f1;
+  border: 1px solid rgba(150, 130, 110, 0.2);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.entrada-texto:focus {
+  outline: none;
+  border-color: #a97c44;
+  box-shadow: 0 6px 16px rgba(169, 124, 68, 0.1);
+}
+
+/* =====================
+   HEADER STYLES
+   ===================== */
+.header {
+  background: linear-gradient(90deg, #0b0610 0%, #2b1b3a 100%);
+  color: #f5eddc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  box-shadow: 0 6px 18px rgba(10, 7, 12, 0.45);
+  position: relative;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.enlace-logo {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  text-decoration: none;
+}
+
+.logo-imagen {
+  max-height: 56px;
+}
+
+.boton-login {
+  padding: 6px 16px;
+}
+
+.boton-login:active {
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.contenedor-menu {
+  width: 55%;
+}
+
+.menu-principal {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.item-navegacion {
+  position: relative;
+  margin-right: 6px;
+  transition: transform 140ms ease;
+}
+
+.enlace-navegacion {
+  padding: 6px 8px;
+  color: #f5eddc;
+  background: linear-gradient(90deg, #c6a156 0%, #9b7a3d 100%);
+}
+
+.submenu {
+  list-style: none;
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 200;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #2b1b3a 0%, #1f1628 100%);
+  box-shadow: 0 10px 22px rgba(8, 6, 10, 0.6);
+  min-width: 160px;
+  max-width: 220px;
+  border: 1px solid rgba(184, 138, 40, 0.1);
+  padding: 4px 0;
+}
+
+.item-navegacion:hover .submenu {
+  visibility: visible;
+  display: block;
+}
+
+.submenuLink {
+  display: block;
+  padding: 8px 12px;
+  color: #f5eddc;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Cinzel', Georgia, serif;
+  transition: background-color 120ms ease;
+}
+
+.submenuLink:hover {
+  background: rgba(184, 138, 40, 0.08);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+  }
+  .logo-imagen {
+    max-height: 45px;
+  }
+  .boton-login {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .contenedor-menu {
+    width: 100%;
+    margin-top: 12px;
+    order: 3;
+  }
+  .menu-principal {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 4px;
+  }
+  .item-navegacion {
+    flex: 0 1 auto;
+  }
+  .enlace-navegacion {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
+
+/* =====================
+   FOOTER STYLES
+   ===================== */
+.footer {
+  background: linear-gradient(90deg, #221726 0%, #171219 100%);
+  color: #dfd6c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  flex-shrink: 0;
+}
+
+.enlaces-redes {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icono-redes {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #c6a156, 0 0 0 3px #9b7a3d;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.icono-redes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 2px #b88628, 0 4px 12px rgba(198, 161, 86, 0.4);
+}
+
+.licencia {
+  text-align: center;
+  max-width: 400px;
+}
+
+.texto-licencia {
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+.texto-licencia a {
+  color: #9b7a3d;
+  text-decoration: none;
+}
+
+.texto-licencia a:hover {
+  text-decoration: underline;
+}
+
+.newsletter {
+  width: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario-newsletter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.correo-newsletter {
+  width: 70%;
+  margin-right: 10px;
+}
+
+.boton-newsletter {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+  .icono-redes {
+    width: 28px;
+    height: 28px;
+  }
+  .newsletter {
+    width: 100%;
+  }
+  .formulario-newsletter {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .correo-newsletter {
+    width: 100%;
+    margin-right: 0;
+    font-size: 13px;
+    padding: 7px 8px;
+  }
+  .boton-newsletter {
+    padding: 7px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .licencia {
+    order: 3;
+    display: none;
+  }
+}
