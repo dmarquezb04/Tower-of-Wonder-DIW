@@ -348,6 +348,8 @@ h1, h2, h3, .boton, .enlace-navegacion {
   }
   .licencia {
     order: 3;
-    display: none;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
   }
 }
