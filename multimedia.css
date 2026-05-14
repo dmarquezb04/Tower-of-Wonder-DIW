@@ -1,19 +1,8 @@
-.contenido-pagina {
-  flex: 1;
-  background: linear-gradient(180deg, #fff7ec 0%, #ffe8d0 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-}
-
+/* =====================
+   multimedia.html
+   ===================== */
 .titulo-multimedia {
-  font-size: 36px;
-  color: #5b4632;
-  margin-bottom: 0px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: 'Cinzel', Georgia, serif;
+  margin-bottom: 0;
 }
 
 .contenedor-multimedia {
